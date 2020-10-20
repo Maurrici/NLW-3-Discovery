@@ -1,0 +1,41 @@
+#page-create{
+    display: flex;
+    min-width: 100;
+}
+
+main{
+    flex: 1;
+}
+
+.map-container{
+    margin-top: 6.4rem;
+    background: #e6f7fb;
+    border: 1px solid #b3dae2;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+}
+
+#mapid{
+    width: 100%;
+    height: 28rem;
+}
+
+.map-container footer{
+    padding: 2rem 0;
+    border: 0;
+    text-align: center;
+    background: #F5F8FA;
+    border-radius: 0 0 20px 20px;
+}
+
+.map-container footer a{
+    text-decoration: none;
+    color: #0089a5;
+    font-weight: 700;
+}
+
+.map-container .leaflet-container{
+    border: 0;
+    border-radius: 0 0 20px 20px;
+}
+

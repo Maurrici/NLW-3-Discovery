@@ -11,7 +11,45 @@
     }
 }
 
+@keyframes right{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes left{
+    from{
+        transform: translateY(-100vh);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 .animate-up{
     animation: up 300ms backwards;
 }
 
+.animation-right{
+    animation: right 300ms backwards;
+}
+
+.animation-left{
+    animation: left 800ms backwards;
+}
+
+.animation-appear{
+    animation: appear 300ms backwards;
+}
