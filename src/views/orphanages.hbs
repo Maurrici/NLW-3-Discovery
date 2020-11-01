@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Localize um orfanato | Happy</title>
 
-    <link rel="icon" href="./public/images/logo-icon.png">
+    <link rel="icon" href="/images/logo-icon.png">
     
     <!-- Estilos Customizados-->
-    <link rel="stylesheet" href="./public/css/styles.css">
-    <link rel="stylesheet" href="./public/css/animations.css">
-    <link rel="stylesheet" href="./public/css/page-orphanage.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/page-orphanage.css">
 
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -28,7 +28,7 @@
    <div id="page-orphanages">
        <aside class="animation-right">
             <header>
-                <img src="./public/images/map-marker.svg" alt="Happy">
+                <img src="/images/map-marker.svg" alt="Happy">
 
                 <h2>Escolha um orfanato no mapa</h2>
 
@@ -43,11 +43,22 @@
 
        <div id="mapid" class="animation-appear"></div>
 
-       <a href="./create-orphanage.html" class="create-orphanage animation-left" title="Cadastre seu orfanato">
-           <img src="./public/images/plus.svg" alt="Criar orfanato">
+       <div class="orphanages">
+            {{#each orphanages}}
+                <span
+                    data-id="{{this.id}}"
+                    data-name="{{this.name}}"
+                    data-lat="{{this.lat}}"
+                    data-lng="{{this.lng}}"
+                ></span>
+            {{/each}}
+       </div>
+       
+       <a href="/create-orphanage" class="create-orphanage animation-left" title="Cadastre seu orfanato">
+           <img src="/images/plus.svg" alt="Criar orfanato">
        </a>
    </div>
 
-   <script src="./public/scripts/page-orphanages.js"></script>
+   <script src="/scripts/page-orphanages.js"></script>
 </body>
 </html>
