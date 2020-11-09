@@ -6,7 +6,10 @@ const options = {
     zoomControl: false
 }
 //Mapa
-const map = L.map('mapid', options).setView([-3.7377088,-38.5414155], 14)
+const spanLat = document.querySelector('span[data-lat]').dataset.lat
+const spanLng = document.querySelector('span[data-lng]').dataset.lng
+
+const map = L.map('mapid', options).setView([spanLat,spanLng], 14)
 
 //Criando e adicionando TileLayer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', ).addTo(map);
@@ -21,7 +24,7 @@ const icon = L.icon({
 
 
 //Criando Marcador
-L.marker([-3.7377088,-38.5414155], { icon }).addTo(map)
+L.marker([spanLat,spanLng], { icon }).addTo(map)
 
 //Galeria de imagens
 

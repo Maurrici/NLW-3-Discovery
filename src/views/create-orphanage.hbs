@@ -40,7 +40,7 @@
        </aside>
 
        <main class="animation-appear width-sidebar">
-           <form action="">
+           <form action="save-orphanage" method="POST">
                <fieldset>
                    <legend>Dados</legend>
 
@@ -64,7 +64,7 @@
 
                     <div class="input-block">
                         <label for="sobre">Sobre <span>Máximo de 300 caracteres</span></label>
-                        <textarea name="sobre" id="sobre" cols="30" rows="10" placeholder="Um lugar de muita alegria..."></textarea>
+                        <textarea name="about" id="sobre" cols="30" rows="10" placeholder="Um lugar de muita alegria..."></textarea>
                     </div>
 
                     <div class="input-block">
@@ -76,7 +76,7 @@
                         <label for="images">Fotos</label>
                         <div class="images-upload" id="images">
                             <div class="new-upload">
-                                <input name="images" placeholder="Cole o link da foto aqui" required>
+                                <input type="url" name="images" placeholder="Cole o link da foto aqui" required>
                                 <span onclick="removePhoto(event)">X</span>
                             </div>
                         </div>
@@ -93,17 +93,17 @@
 
                     <div class="input-block">
                         <label for="instruction">Instruções</label>
-                        <input type="text" id="instruction" name="instruction" required>
+                        <input type="text" id="instruction" name="instructions" required>
                     </div>
 
                     <div class="input-block">
                         <label for="opening-hours">Horário de Funcionamento</label>
-                        <input type="text" id="opening-hours" name="openingHours" required>
+                        <input type="text" id="opening-hours" name="opening_hours" required>
                     </div>
 
                     <div class="input-block">
                         <label for="open-weekends">Atende aos fins de semana?</label>
-                        <input type="hidden" id="open-weekends" name="openWeekends" value="1">
+                        <input type="hidden" id="open-weekends" name="opening_weekends" value="1">
                         
                         <div class="button-select">
                             <button type="button" onclick="changeOption(event)" class="active">Sim</button>

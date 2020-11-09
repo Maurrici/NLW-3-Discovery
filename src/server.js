@@ -7,6 +7,7 @@ const server = express()
 
 //Configurando rotas estáticas
 server.use(express.static('public'))
+server.use(express.urlencoded({extended: true}))
 
 //Configurando Template engine
 server.set('views', path.join(__dirname, 'views'))
@@ -17,5 +18,6 @@ server.get('/', pages.index)
 server.get('/orphanage', pages.orphanage)
 server.get('/orphanages', pages.orphanages)
 server.get('/create-orphanage', pages.createOrphanage)
+server.post('/save-orphanage', pages.saveOrphanage)
 
 server.listen(5500)
